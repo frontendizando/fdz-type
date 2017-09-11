@@ -1,0 +1,81 @@
+{
+  "name": "fdz-hook",
+  "version": "1.0.2",
+  "description": "A simple accordion to show and hide content made in Vanilla JS",
+  "main": "lib/index.js",
+  "scripts": {
+    "clear": "rimraf lib && rimraf dist",
+    "build:all": "npm run clear && npm run build:lib && npm run build:umd && npm run build:umd:min",
+    "build:umd": "./node_modules/.bin/webpack",
+    "build:lib": "./node_modules/.bin/babel src/scripts --out-dir lib",
+    "build:umd:min": "cross-env NODE_ENV=production ./node_modules/.bin/webpack -p",
+    "test": "./node_modules/.bin/mocha ./tests/*.spec.js --require babel-register",
+    "test:tdd": "./node_modules/.bin/mocha ./tests/*.spec.js --require babel-register --watch",
+    "test:coverage": "nyc npm run test",
+    "prepush": "npm run lint && npm run test",
+    "lint": "./node_modules/.bin/eslint ./src/**/*.js"
+  },
+  "nyc": {
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
+  },
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "keywords": [
+    "hook",
+    "plugin",
+    "fdz-hook"
+  ],
+  "author": "Daniel Simão <simaodeveloper@gmail.com> (http://danielsimao.com.br/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/frontendizando/fdz-hook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/frontendizando/fdz-hook/issues"
+  },
+  "homepage": "https://github.com/frontendizando/fdz-hook#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "chai-spies": "^0.7.1",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "gitignore": "^0.6.0",
+    "husky": "^0.14.3",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "mocha": "^3.5.0",
+    "node-sass": "^4.5.3",
+    "nyc": "^11.2.1",
+    "sass-loader": "^6.0.6",
+    "sinon": "^3.2.1",
+    "sinon-chai": "^2.13.0",
+    "style-loader": "^0.18.2",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "webpack": "^3.5.5"
+  },
+  "dependencies": {
+    "extract-text-webpack-plugin": "^3.0.0"
+  },
+  "directories": {
+    "example": "examples",
+    "test": "tests"
+  }
+}
