@@ -47,7 +47,11 @@ describe('typechecker', () => {
 
     it('should to return true when called with "foo" value', () => {
       let isString = typechecker.is('string');
-      expect(isString("foo")).to.be.true;
+      expect(isString('foo')).to.be.true;
+    });
+
+    it('should to throw a error', () => {
+      expect(typechecker.is.bind(typechecker, {})).to.throw('type required must be a string!');
     });
   });
 
