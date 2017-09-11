@@ -1,4 +1,4 @@
-# FDZ Typechecker
+# FDZ Type
 
 A simple way to add hooks in any javascript aplication - Vanilla JS
 
@@ -16,7 +16,7 @@ A tiny tool to become type check validation easy pizzy - Vanilla JS
 ## Installation
 
 ```sh
-$ npm install fdz-typechecker --save
+$ npm install fdz-type --save
 ```
 
 ## How to use
@@ -25,46 +25,46 @@ $ npm install fdz-typechecker --save
 
 ```js
 // to import a specific method
-import Typechecker from 'fdz-hook';
+import Type from 'fdz-took';
 
 // using  method
-Typechecker.is('string', someValue);
+Type.is('string', someValue);
 ```
 
 ### CommonJS
 
 ```js
-const Typechecker = require('fdz-typechecker');
+const Type = require('fdz-type');
 
-const boolValue = Typechecker.is('string', "foo");
+const boolValue = Type.is('string', "foo");
 ```
 
 ### UMD in Browser
 
 ```html
 <!-- to import non-minified version -->
-<script src="fdz-typechecker.umd.js"></script>
+<script src="fdz-type.umd.js"></script>
 
 <!-- to import minified version -->
-<script src="fdz-typechecker.umd.min.js"></script>
+<script src="fdz-type.umd.min.js"></script>
 ```
 
-After that the library will be available to the Global as `Typechecker`. Follow an example:
+After that the library will be available to the Global as `Type`. Follow an example:
 
 ```js
 
-Typechecker.is('object', {});
+Type.is('object', {});
 
 or
 
-Typechecker.is('object')({});
+Type.is('object')({});
 ```
 
 ## Methods
 
 > Follow the methods that the library provides.
 
-### Typechecker.is(type, value)
+### Type.is(type, value)
 
 > Verify if value is equal type of the first argument
 
@@ -78,11 +78,11 @@ Typechecker.is('object')({});
 **Example**
 
 ```js
-Typechecker.is('object', {}); // true
-Typechecker.is('string', {}); // false
+Type.is('object', {}); // true
+Type.is('string', {}); // false
 ```
 
-### Typechecker.of(value)
+### Type.of(value)
 
 > Verify what is the value type 
 
@@ -95,7 +95,7 @@ Typechecker.is('string', {}); // false
 **Example**
 
 ```js
-Typechecker.of({}); // object
+Type.of({}); // object
 ```
 
 ## Contributing
