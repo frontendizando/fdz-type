@@ -1,4 +1,4 @@
-# FDZ Hooks
+# FDZ TypeChecker
 
 A simple way to add hooks in any javascript aplication - Vanilla JS
 

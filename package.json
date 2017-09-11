@@ -1,7 +1,7 @@
 {
-  "name": "fdz-hook",
-  "version": "1.0.2",
-  "description": "A simple accordion to show and hide content made in Vanilla JS",
+  "name": "fdz-typechecker",
+  "version": "1.0.0",
+  "description": "A tiny tool to become type check validation easy pizzy - Vanilla JS",
   "main": "lib/index.js",
   "scripts": {
     "clear": "rimraf lib && rimraf dist",
@@ -31,18 +31,18 @@
   "keywords": [
     "hook",
     "plugin",
-    "fdz-hook"
+    "fdz-typechecker"
   ],
   "author": "Daniel Simão <simaodeveloper@gmail.com> (http://danielsimao.com.br/)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/frontendizando/fdz-hook.git"
+    "url": "git+ssh://git@github.com/frontendizando/fdz-typechecker.git"
   },
   "bugs": {
-    "url": "https://github.com/frontendizando/fdz-hook/issues"
+    "url": "https://github.com/frontendizando/fdz-typechecker/issues"
   },
-  "homepage": "https://github.com/frontendizando/fdz-hook#readme",
+  "homepage": "https://github.com/frontendizando/fdz-typechecker#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
