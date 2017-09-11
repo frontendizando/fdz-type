@@ -12,12 +12,12 @@ This library relies on [Map API](http://www.ecma-international.org/ecma-262/6.0/
 
 ## Dependencies
 
-This library is totally make in Vanilla JS
+A tiny tool to become type check validation easy pizzy - Vanilla JS
 
 ## Installation
 
 ```sh
-$ npm install fdz-hook --save
+$ npm install fdz-typechecker --save
 ```
 
 ## How to use
@@ -26,48 +26,42 @@ $ npm install fdz-hook --save
 
 ```js
 // to import a specific method
-import Hook from 'fdz-hook';
-
-const hook = new Hook();
+import Typechecker from 'fdz-hook';
 
 // using  method
-hook.register('click', () => console.log('Works!'));
+Typechecker.is('string', someValue);
 ```
 
 ### CommonJS
 
 ```js
-const Hook = require('fdz-hook');
+const Typechecker = require('fdz-typechecker');
 
-const hook = new Hook();
+const boolValue = Typechecker.is('string', "foo");
 ```
 
 ### UMD in Browser
 
 ```html
 <!-- to import non-minified version -->
-<script src="fdz-hook.umd.js"></script>
+<script src="fdz-typechecker.umd.js"></script>
 
 <!-- to import minified version -->
-<script src="fdz-hook.umd.min.js"></script>
+<script src="fdz-typechecker.umd.min.js"></script>
 ```
 
-After that the library will be available to the Global as `Hook`. Follow an example:
+After that the library will be available to the Global as `Typechecker`. Follow an example:
 
 ```js
 
-const hook = new Hook();
-
-hook.register('beforeOpen', () => {
-  console.log('Opening!');
-});
+Typechecker.is('object', {});
 ```
 
 ## Methods
 
 > Follow the methods that the library provides.
 
-### hook.register(name, fn)
+### Typechecker.is(type, value)
 
 > Register a hook inside hook object
 
@@ -75,18 +69,17 @@ hook.register('beforeOpen', () => {
 
 | Argument | Type    | Options           |
 |----------|---------|-------------------|
-|`name`   |*string* | 'inform a hook name'|
-|`fn`   |*function* | 'provide a callback'|
+|`type`   |*string* | 'inform a type name'|
+|`value`   |*any* | 'any value'|
 
 **Example**
 
 ```js
-hook.register('beforeMount', (instance) => {
-  // do something
-});
+Typechecker.is('object', {}); // true
+Typechecker.is('string', {}); // false
 ```
 
-### hook.call(name, args1, args2...)
+### Typechecker.of(value)
 
 > Call a hook from hook object
 
@@ -94,13 +87,12 @@ hook.register('beforeMount', (instance) => {
 
 | Argument | Type    | Options           |
 |----------|---------|-------------------|
-|`name`   |*string* | 'inform a hook name'|
-|`args`   |*any* | 'provide arguments one by one'|
+|`name`   |*any* | 'inform any value'|
 
 **Example**
 
 ```js
-hook.call('beforeMount', { name: 'Lorem' });
+hTypechecker.of({}); // object
 ```
 
 ## Contributing
