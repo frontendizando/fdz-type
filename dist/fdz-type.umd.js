@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["Typechecker"] = factory();
+		exports["Type"] = factory();
 	else
-		root["Typechecker"] = factory();
+		root["Type"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -141,4 +141,4 @@ exports.default = {
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=fdz-typechecker.umd.js.map
+//# sourceMappingURL=fdz-type.umd.js.map

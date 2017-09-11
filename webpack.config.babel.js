@@ -3,7 +3,7 @@ import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 const include = resolve(__dirname, 'src/scripts');
-const nameFile = 'fdz-typechecker';
+const nameFile = 'fdz-type';
 const nameLib = nameFile.replace('fdz-', '').split('').map((substr, idx) => {
   return (idx === 0) ? substr[0].toUpperCase() : substr;
 }).join('');

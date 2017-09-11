@@ -1,5 +1,5 @@
 {
-  "name": "fdz-typechecker",
+  "name": "fdz-type",
   "version": "1.0.0",
   "description": "A tiny tool to become type check validation easy pizzy - Vanilla JS",
   "main": "lib/index.js",
@@ -31,18 +31,18 @@
   "keywords": [
     "hook",
     "plugin",
-    "fdz-typechecker"
+    "fdz-type"
   ],
   "author": "Daniel Simão <simaodeveloper@gmail.com> (http://danielsimao.com.br/)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/frontendizando/fdz-typechecker.git"
+    "url": "git+ssh://git@github.com/frontendizando/fdz-type.git"
   },
   "bugs": {
-    "url": "https://github.com/frontendizando/fdz-typechecker/issues"
+    "url": "https://github.com/frontendizando/fdz-type/issues"
   },
-  "homepage": "https://github.com/frontendizando/fdz-typechecker#readme",
+  "homepage": "https://github.com/frontendizando/fdz-type#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
