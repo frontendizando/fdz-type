@@ -54,6 +54,10 @@ After that the library will be available to the Global as `Typechecker`. Follow 
 ```js
 
 Typechecker.is('object', {});
+
+or
+
+Typechecker.is('object')({});
 ```
 
 ## Methods
@@ -62,7 +66,7 @@ Typechecker.is('object', {});
 
 ### Typechecker.is(type, value)
 
-> Register a hook inside hook object
+> Verify if value is equal type of the first argument
 
 **Arguments**
 
@@ -80,7 +84,7 @@ Typechecker.is('string', {}); // false
 
 ### Typechecker.of(value)
 
-> Call a hook from hook object
+> Verify what is the value type 
 
 **Arguments**
 
@@ -91,7 +95,7 @@ Typechecker.is('string', {}); // false
 **Example**
 
 ```js
-hTypechecker.of({}); // object
+Typechecker.of({}); // object
 ```
 
 ## Contributing
